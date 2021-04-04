@@ -8,12 +8,20 @@ var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
+<<<<<<< HEAD
 // function to generate a random numeric value
 var randomNumber = function(min, max) {
     var value = Math.floor(Math.random() * (max - min + 1) + min);
 
     return value;
 }; 
+=======
+var randomNumber = function(min,max) {
+    var value = Math.floor(Math.random() * (max-min+1)+min);
+
+    return value;
+}
+>>>>>>> feature/random
 
 //fight function (now with parameeter for enemy's name)
 var fight = function (enemyName) {
@@ -30,17 +38,28 @@ var fight = function (enemyName) {
             if (confirmSkip) {
                 window.alert(playerName + " has decided to skip this fight. Goodbye!");
                 // subtract money from playerMoney for skipping
+<<<<<<< HEAD
                 playerMoney = Math.max(0, playerMoney - 10);
+=======
+                playerMoney = Math.max(0, playerMoney -10);
+>>>>>>> feature/random
                 console.log("playerMoney", playerMoney);
                 break;
             }
         }
 
         // remove enemy's health by subtracting the amount set in the playerAttack variable
+<<<<<<< HEAD
         // generate random damage value based on player's attack power
         var damage = randomNumber(playerAttack - 3, playerAttack);
 
         enemyHealth = Math.max(0, enemyHealth - damage);
+=======
+        var damage = randomNumber (playerAttack -3, enemyAttack);
+
+        enemyHealth = Math.max(0, enemyHealth -damage);
+        
+>>>>>>> feature/random
         console.log(
             playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
         );
@@ -59,7 +78,11 @@ var fight = function (enemyName) {
         }
 
         // remove player's health by subtracting the amount set in the enemyAttack variable
+<<<<<<< HEAD
         var damage = randomNumber(enemyAttack - 3, enemyAttack);
+=======
+        var damage = randomNumber(enemyAttack -3, enemyAttack);
+>>>>>>> feature/random
 
         playerHealth = Math.max(0, playerHealth - damage);
         console.log(
@@ -95,7 +118,11 @@ var startGame = function () {
             var pickedEnemyName = enemyNames[i];
 
             //reset enemyHealth before starting new fight
+<<<<<<< HEAD
             enemyHealth = randomNumber(40, 60);
+=======
+            enemyHealth = randomNumber(40,60);
+>>>>>>> feature/random
 
             //pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
             fight(pickedEnemyName);
